@@ -48,63 +48,6 @@ public class BookSellerAgent extends Agent {
 	private BookSellerGui myGui;
         String url = "jdbc:sqlite:C://sqlite/db/bookstore1.db";
         
-        /*private Connection connect()
-        {
-            
-            
-            Connection conn = null;
-            
-            String sql = "CREATE TABLE IF NOT EXISTS catalogues(\n"
-                    +"sellerName text PRIMARY KEY, \n"
-                    +"bookTitle text NOT NULL, \n"
-                    +"bookPrice integer\n"
-                    +");";
-            
-            try
-            {
-                conn = DriverManager.getConnection(url);
-                System.out.println("Database Operation. Connect Successfully");
-                
-                try(Statement st = conn.createStatement())
-                {
-                    st.execute(sql);
-                    System.out.println("Database Operation. Table Created");
-                }
-                catch(SQLException e)
-                {
-                    System.out.println("Database Operation"+e.getMessage());
-                }
-            }
-            catch(SQLException ex)
-            {
-                System.out.println("Database Exception: "+ex.getMessage());
-            }
-            return conn;
-        }
-        
-        
-        public void insert_into_db(String seller, final String title, final int price)
-        {
-            String sql = "INSERT INTO catalogues(sellerAgent, booktitle, price) VALUES('"+seller+"','"+title+"','"+price+"')";
-            
-            //seller = getAID().getName();
-            
-            try (Connection conn = this.connect(); PreparedStatement pst = conn.prepareStatement(sql))
-            {
-                pst.setString(1, seller);
-                pst.setString(2, title);
-                pst.setInt(3, price);
-                pst.executeUpdate();
-                System.out.print(pst.executeUpdate());
-                System.out.print("Updated to catalogue");
-            }
-            catch(SQLException ex)
-            {
-                Logger.getLogger(BookSellerAgent.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-        }
-        */
 	// Put agent initializations here
 	protected void setup() {
 		// Create the catalogue

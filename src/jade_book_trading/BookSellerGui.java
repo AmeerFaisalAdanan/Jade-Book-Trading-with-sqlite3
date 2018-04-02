@@ -27,6 +27,7 @@ import jade.core.AID;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.SQLException;
 import javax.swing.*;
 
 /**
@@ -36,6 +37,8 @@ class BookSellerGui extends JFrame {
 	private BookSellerAgent myAgent;
 	
 	private JTextField titleField, priceField;
+        
+        
 	
 	BookSellerGui(BookSellerAgent a) {
 		super(a.getLocalName());
@@ -82,7 +85,11 @@ class BookSellerGui extends JFrame {
 		setResizable(false);
 	}
 	
-	public void showGui() {
+	public void showGui() throws SQLException {
+            
+                SQLiteJDBCDriverConnection SQL = new SQLiteJDBCDriverConnection();
+                SQL.DatabaseManagement();
+                
 		pack();
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int centerX = (int)screenSize.getWidth() / 2;

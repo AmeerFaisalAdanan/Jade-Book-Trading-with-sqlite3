@@ -179,7 +179,9 @@ public class BookBuyerAgent extends Agent {
                                                     
                                                     Statement st = conn.createStatement();
                                                     
-                                                    String buyer_records = "INSERT INTO buyers (buyerName, bookTitle, bookPrice, sellerName) VALUES ('"+getAID().getName()+"','"+targetBookTitle+"','"+bestPrice+"','"+reply.getSender().getName()+"')";
+                                                    String buyer_records = "INSERT INTO buyers (buyerName, bookTitle, bookPrice, sellerName) VALUES "
+                                                            + "('"+getAID().getName()+"','"+targetBookTitle+"','"+bestPrice+"','"+reply.getSender().getName()+"')";
+                                                    
                                                     st.execute(buyer_records);
                                                     System.out.println("Database Connected! Book Purchased");
                                                     
