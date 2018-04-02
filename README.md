@@ -3,5 +3,6 @@ A simple book trading agent using java agent JADE
 
 
 # Commits
--Added sqlite database connection manager
--table are dropped and created upon sellerAgent gui are created
+1. Added sqlite database connection manager
+2. table are dropped and created upon sellerAgent gui are created
+
